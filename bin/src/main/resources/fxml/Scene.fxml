@@ -17,7 +17,7 @@
    <center>
       <VBox BorderPane.alignment="CENTER">
          <children>
-            <GridPane alignment="CENTER">
+            <GridPane>
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -31,26 +31,20 @@
               </rowConstraints>
                <children>
                   <Button fx:id="btnNuovaPartita" mnemonicParsing="false" onAction="#doNuovaPartita" text="Nuova partita" />
-                  <TextField fx:id="txtNMax" GridPane.columnIndex="2">
+                  <TextField fx:id="txtNMax" GridPane.columnIndex="2" />
+                  <Label text="Numero massimo" GridPane.columnIndex="1">
                      <GridPane.margin>
-                        <Insets />
-                     </GridPane.margin></TextField>
-                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="186.0" text="Numero massimo" GridPane.columnIndex="1">
-                     <GridPane.margin>
-                        <Insets />
+                        <Insets left="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="156.0" text="Tentativi massimi" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Tentativi massimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="txtTMax" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtTentativi" editable="false" prefHeight="26.0" prefWidth="66.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Tentativi rimasti" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btnPRova" alignment="CENTER" mnemonicParsing="false" onAction="#doProva" prefHeight="26.0" prefWidth="152.0" text="Prova" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtTentativi" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label text="Tentativi rimasti" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="btnPRova" mnemonicParsing="false" onAction="#doProva" text="Prova" GridPane.rowIndex="3" />
                   <TextField fx:id="txtProva" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <ProgressBar fx:id="barTentativi" prefHeight="18.0" prefWidth="158.0" progress="0.0" GridPane.rowIndex="2" />
+                  <ProgressBar fx:id="barTentativi" prefWidth="200.0" progress="0.0" GridPane.rowIndex="2" />
                </children>
-               <padding>
-                  <Insets left="3.0" right="3.0" />
-               </padding>
             </GridPane>
             <TextArea fx:id="txtRisultato" editable="false" prefHeight="200.0" prefWidth="200.0" />
          </children>
